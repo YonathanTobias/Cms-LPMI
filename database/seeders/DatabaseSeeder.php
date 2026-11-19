@@ -1048,16 +1048,7 @@ class DatabaseSeeder extends Seeder
                                 </div>
                             </div>
 
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" rel="noopener noreferrer" class="p-5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-sky-500 dark:hover:border-sky-500 hover:shadow-md transition text-center space-y-3 block group">
-                                    <div class="text-3xl text-sky-600 dark:text-sky-400 group-hover:scale-110 transition transform"><i class="fa-solid fa-file-pdf"></i></div>
-                                    <div>
-                                        <h5 class="font-bold text-slate-900 dark:text-white text-sm">AMI D3 Keperawatan</h5>
-                                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Laporan Hasil Audit Mutu</p>
-                                    </div>
-                                    <span class="inline-flex items-center text-[11px] font-bold text-sky-600 dark:text-sky-400 group-hover:underline">Buka Google Drive <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i></span>
-                                </a>
-
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" rel="noopener noreferrer" class="p-5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-md transition text-center space-y-3 block group">
                                     <div class="text-3xl text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition transform"><i class="fa-solid fa-file-pdf"></i></div>
                                     <div>
@@ -1276,16 +1267,7 @@ class DatabaseSeeder extends Seeder
                                 </div>
                             </div>
 
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" rel="noopener noreferrer" class="p-5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-sky-500 dark:hover:border-sky-500 hover:shadow-md transition text-center space-y-3 block group">
-                                    <div class="text-3xl text-sky-600 dark:text-sky-400 group-hover:scale-110 transition transform"><i class="fa-solid fa-file-pdf"></i></div>
-                                    <div>
-                                        <h5 class="font-bold text-slate-900 dark:text-white text-sm">AMI D3 Keperawatan</h5>
-                                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Laporan Hasil Audit Mutu</p>
-                                    </div>
-                                    <span class="inline-flex items-center text-[11px] font-bold text-sky-600 dark:text-sky-400 group-hover:underline">Buka Google Drive <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i></span>
-                                </a>
-
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
                                 <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" rel="noopener noreferrer" class="p-5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-md transition text-center space-y-3 block group">
                                     <div class="text-3xl text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition transform"><i class="fa-solid fa-file-pdf"></i></div>
                                     <div>
