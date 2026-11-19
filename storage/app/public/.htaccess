@@ -1,0 +1,74 @@
+# ==============================================================================
+# Enterprise Security & Anti-Malware / Anti-Webshell Protection for Storage
+# ==============================================================================
+
+# 1. Disable Directory Indexing, CGI, and Server Side Includes (SSI)
+Options -Indexes -ExecCGI -Includes
+
+# 2. Disable PHP and Script Engines completely (mod_php, PHP-FPM / FastCGI)
+<IfModule mod_php.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php7.c>
+    php_flag engine off
+</IfModule>
+<IfModule mod_php8.c>
+    php_flag engine off
+</IfModule>
+
+RemoveHandler .php .phtml .php3 .php4 .php5 .php7 .php8 .phps .phar .inc .cgi .pl .py .sh .bash .asp .aspx .jsp
+RemoveType .php .phtml .php3 .php4 .php5 .php7 .php8 .phps .phar .inc .cgi .pl .py .sh .bash .asp .aspx .jsp
+
+# 3. Deny access to all known executable scripts, web shells, and system files
+<FilesMatch "(?i)\.(php|php[0-9]?|phtml|phar|phps|inc|pl|py|pyc|pyo|sh|bash|zsh|cgi|fcgi|asp|aspx|cer|cdx|asa|ashx|asmx|axd|jsp|jspx|cfm|cfc|exe|dll|bin|cmd|bat|vbs|vbe|js|jse|wsf|wsh|msi|scr|pif|com|reg|htaccess|htpasswd|env|git|log|bak|sql|sqlite|sqlite3|ini|conf|config|yml|yaml)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# 4. Block Double-Extension and Null-Byte Bypass attacks (e.g. image.php.jpg or shell.phtml.png)
+<FilesMatch "(?i)\.(php[0-9]?|phtml|phar|pl|py|cgi|asp|aspx|jsp|sh|exe)\.">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Deny from all
+    </IfModule>
+</FilesMatch>
+
+# 5. Whitelist strictly allowed safe extensions (documents, media, archives)
+<FilesMatch "(?i)\.(pdf|doc|docx|xls|xlsx|ppt|pptx|odt|ods|odp|rtf|txt|csv|zip|rar|7z|tar|gz|jpg|jpeg|png|gif|webp|svg|bmp|ico|mp4|webm|ogv|mp3|wav|ogg)$">
+    <IfModule mod_authz_core.c>
+        Require all granted
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order allow,deny
+        Allow from all
+    </IfModule>
+</FilesMatch>
+
+# Ensure proper MIME types for images & documents
+<IfModule mod_mime.c>
+    AddType image/webp .webp
+    AddType image/svg+xml .svg
+    AddType image/jpeg .jpg .jpeg
+    AddType image/png .png
+    AddType image/gif .gif
+    AddType application/pdf .pdf
+</IfModule>
+
+# 6. HTTP Security Headers to prevent MIME-type spoofing & SVG Stored XSS
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+    Header set X-Download-Options "noopen"
+    Header set X-Robots-Tag "noindex, nofollow"
+
+    <FilesMatch "(?i)\.svg$">
+        Header set Content-Security-Policy "default-src 'none'; style-src 'unsafe-inline'; sandbox"
+    </FilesMatch>
+</IfModule>

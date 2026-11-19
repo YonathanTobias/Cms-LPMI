@@ -1,0 +1,9 @@
+*
+!.gitignore
+!.htaccess
+!carousels/
+!carousels/*
+!organization/
+!organization/*
+!posts/
+!posts/*
