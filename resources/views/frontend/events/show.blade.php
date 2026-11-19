@@ -16,24 +16,24 @@
     <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
         <!-- Main Event (8 cols) -->
         <div class="lg:col-span-8 space-y-6">
-            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 space-y-6">
-                <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 leading-tight">
+            <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800 space-y-6">
+                <h1 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white leading-tight">
                     {{ $event->title }}
                 </h1>
 
                 <!-- Event Key Details Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-slate-50 p-4 rounded-xl border border-slate-100 text-xs text-slate-700">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-100 dark:border-slate-700 text-xs text-slate-700 dark:text-slate-300">
                     <div class="flex items-start space-x-3">
                         <i class="fa-regular fa-calendar text-sky-600 text-base mt-0.5"></i>
                         <div>
-                            <span class="font-bold block text-slate-900">Tanggal Pelaksanaan:</span>
+                            <span class="font-bold block text-slate-900 dark:text-white">Tanggal Pelaksanaan:</span>
                             <span>{{ $event->start_date->translatedFormat('l, d F Y') }}</span>
                         </div>
                     </div>
                     <div class="flex items-start space-x-3">
                         <i class="fa-regular fa-clock text-sky-600 text-base mt-0.5"></i>
                         <div>
-                            <span class="font-bold block text-slate-900">Waktu:</span>
+                            <span class="font-bold block text-slate-900 dark:text-white">Waktu:</span>
                             <span>{{ $event->start_date->format('H:i') }} WIB @if($event->end_date) - {{ $event->end_date->format('H:i') }} WIB @endif</span>
                         </div>
                     </div>
@@ -41,7 +41,7 @@
                     <div class="flex items-start space-x-3 sm:col-span-2">
                         <i class="fa-solid fa-location-dot text-rose-600 text-base mt-0.5"></i>
                         <div>
-                            <span class="font-bold block text-slate-900">Tempat / Lokasi:</span>
+                            <span class="font-bold block text-slate-900 dark:text-white">Tempat / Lokasi:</span>
                             <span>{{ $event->location }}</span>
                         </div>
                     </div>
@@ -56,8 +56,8 @@
 
                 <!-- Description -->
                 <div class="space-y-3">
-                    <h3 class="text-base font-bold text-slate-900">Deskripsi & Informasi Kegiatan</h3>
-                    <div class="prose max-w-none text-slate-600 text-sm leading-relaxed whitespace-pre-line">
+                    <h3 class="text-base font-bold text-slate-900 dark:text-white">Deskripsi & Informasi Kegiatan</h3>
+                    <div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 text-sm leading-relaxed whitespace-pre-line">
                         {{ $event->description }}
                     </div>
                 </div>

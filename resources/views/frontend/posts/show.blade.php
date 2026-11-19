@@ -48,8 +48,8 @@
             @endif
 
             <!-- Article Content -->
-            <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200">
-                <div class="prose max-w-none text-slate-700 leading-relaxed text-sm sm:text-base space-y-4">
+            <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-8 shadow-sm border border-slate-200 dark:border-slate-800">
+                <div class="prose dark:prose-invert max-w-none text-slate-700 dark:text-slate-200 leading-relaxed text-sm sm:text-base space-y-4">
                     {!! $post->content !!}
                 </div>
             </div>

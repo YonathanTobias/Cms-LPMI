@@ -55,11 +55,14 @@ Route::post('/kontak/kirim', [HomeController::class, 'sendMessage'])->name('cont
 
 /*
 |--------------------------------------------------------------------------
-| Admin Authentication Routes (Secret Slug: /sugar only)
+| Admin Authentication Routes (Secret Slug: /sugar only + Aliases)
 |--------------------------------------------------------------------------
 */
 Route::get('/sugar', [AuthController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/sugar', [AuthController::class, 'login'])->name('admin.login.submit');
+Route::get('/login', fn() => redirect()->route('admin.login'));
+Route::get('/admin/login', fn() => redirect()->route('admin.login'));
+Route::post('/admin/login', [AuthController::class, 'login']);
 
 Route::prefix('admin')->name('admin.')->group(function () {
     Route::post('/logout', [AuthController::class, 'logout'])->name('logout');
@@ -78,11 +81,13 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         /*
         |------------------------------------------------------------------
-        | Super Admin Exclusive Routes (1-Click Preset Switcher & Kelola Admin)
+        | Super Admin Exclusive Routes (Settings, Preset Switcher & Kelola Admin)
         |------------------------------------------------------------------
         */
         Route::middleware(EnsureSuperAdmin::class)->group(function () {
-            // 1-Click Preset Switcher (Super Admin Only)
+            // Settings & Preset Switcher (Super Admin Only)
+            Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
+            Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
             Route::post('/settings/apply-preset', [SettingController::class, 'applyPreset'])->name('settings.preset');
 
             // User Management / Kelola Akun Admin (Super Admin Only)
@@ -91,12 +96,9 @@ Route::prefix('admin')->name('admin.')->group(function () {
 
         /*
         |------------------------------------------------------------------
-        | Operational Division Content & Settings (Super Admin & Admin)
+        | Operational Division Content & Management (Super Admin & Admin)
         |------------------------------------------------------------------
         */
-        Route::get('/settings', [SettingController::class, 'index'])->name('settings.index');
-        Route::post('/settings', [SettingController::class, 'update'])->name('settings.update');
-
         Route::resource('posts', PostController::class);
         Route::resource('categories', CategoryController::class)->except(['create', 'show', 'edit']);
         Route::resource('carousels', \App\Http\Controllers\Admin\CarouselController::class);

@@ -16,15 +16,15 @@
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
     <!-- Search & Filter -->
-    <div class="bg-white rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200 mb-8">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl p-4 sm:p-6 shadow-sm border border-slate-200 dark:border-slate-800 mb-8">
         <form action="{{ route('documents') }}" method="GET" class="flex flex-col sm:flex-row gap-4 justify-between items-center">
             <!-- Filter Categories -->
             <div class="flex flex-wrap gap-2 w-full sm:w-auto">
-                <a href="{{ route('documents') }}" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition {{ !request('kategori') ? 'bg-theme-primary text-white shadow' : 'bg-slate-100 text-slate-700 hover:bg-slate-200' }}">
+                <a href="{{ route('documents') }}" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition {{ !request('kategori') ? 'bg-theme-primary text-white shadow' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700' }}">
                     Semua Kategori
                 </a>
                 @foreach($categories as $cat)
-                <a href="{{ route('documents', ['kategori' => $cat->slug]) }}" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition {{ request('kategori') == $cat->slug ? 'bg-theme-primary text-white shadow' : 'bg-slate-100 text-slate-700 hover:bg-slate-200' }}">
+                <a href="{{ route('documents', ['kategori' => $cat->slug]) }}" class="px-3.5 py-1.5 rounded-lg text-xs font-bold transition {{ request('kategori') == $cat->slug ? 'bg-theme-primary text-white shadow' : 'bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700' }}">
                     {{ $cat->name }} ({{ $cat->documents_count }})
                 </a>
                 @endforeach
@@ -32,20 +32,20 @@
 
             <!-- Search input -->
             <div class="relative w-full sm:w-72">
-                <input type="text" name="q" value="{{ request('q') }}" placeholder="Cari nama berkas..." class="w-full pl-9 pr-4 py-2 rounded-xl text-xs bg-slate-50 border border-slate-200 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:bg-white">
+                <input type="text" name="q" value="{{ request('q') }}" placeholder="Cari nama berkas..." class="w-full pl-9 pr-4 py-2 rounded-xl text-xs bg-slate-50 dark:bg-slate-800/80 text-slate-900 dark:text-slate-100 border border-slate-200 dark:border-slate-700 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:bg-white dark:focus:bg-slate-800 placeholder:text-slate-400">
                 <i class="fa-solid fa-magnifying-glass absolute left-3 top-2.5 text-slate-400 text-xs"></i>
             </div>
         </form>
     </div>
 
     <!-- Documents List Table / Cards -->
-    <div class="bg-white rounded-2xl shadow-sm border border-slate-200 overflow-hidden">
-        <div class="divide-y divide-slate-200">
+    <div class="bg-white dark:bg-slate-900 rounded-2xl shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden">
+        <div class="divide-y divide-slate-200 dark:divide-slate-800">
             @forelse($documents as $doc)
             @php
                 $isUrl = str_starts_with($doc->file_path, 'http');
             @endphp
-            <div class="p-5 sm:p-6 hover:bg-slate-50 transition flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <div class="p-5 sm:p-6 hover:bg-slate-50 dark:hover:bg-slate-800/50 transition flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div class="flex items-start sm:items-center gap-4 min-w-0 flex-1">
                     <div class="w-12 h-12 rounded-xl flex items-center justify-center text-xl flex-shrink-0 border 
                         @if($doc->file_type == 'GDRIVE') bg-amber-50 text-amber-600 border-amber-200

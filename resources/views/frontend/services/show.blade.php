@@ -26,11 +26,11 @@
         <div class="lg:col-span-8 space-y-8">
             <!-- Deskripsi Layanan -->
             @if($service->description)
-            <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 space-y-4">
-                <h2 class="text-lg font-bold text-slate-900 flex items-center">
+            <div class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+                <h2 class="text-lg font-bold text-slate-900 dark:text-white flex items-center">
                     <i class="fa-solid fa-circle-info mr-2 text-theme-primary"></i> Deskripsi Layanan
                 </h2>
-                <div class="prose max-w-none text-slate-600 text-sm leading-relaxed whitespace-pre-line">
+                <div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 text-sm leading-relaxed whitespace-pre-line">
                     {{ $service->description }}
                 </div>
             </div>
@@ -38,11 +38,11 @@
 
             <!-- Persyaratan -->
             @if($service->requirements)
-            <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 space-y-4">
-                <h2 class="text-lg font-bold text-slate-900 flex items-center">
+            <div class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+                <h2 class="text-lg font-bold text-slate-900 dark:text-white flex items-center">
                     <i class="fa-solid fa-list-check mr-2 text-emerald-600"></i> Persyaratan Berkas / Administrasi
                 </h2>
-                <div class="prose max-w-none text-slate-600 text-sm leading-relaxed whitespace-pre-line bg-slate-50 p-4 rounded-xl border border-slate-100">
+                <div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 text-sm leading-relaxed whitespace-pre-line bg-slate-50 dark:bg-slate-800/60 p-4 rounded-xl border border-slate-100 dark:border-slate-700">
                     {{ $service->requirements }}
                 </div>
             </div>
@@ -50,11 +50,11 @@
 
             <!-- Alur & Prosedur -->
             @if($service->procedure)
-            <div class="bg-white rounded-2xl p-8 shadow-sm border border-slate-200 space-y-4">
-                <h2 class="text-lg font-bold text-slate-900 flex items-center">
+            <div class="bg-white dark:bg-slate-900 rounded-2xl p-8 shadow-sm border border-slate-200 dark:border-slate-800 space-y-4">
+                <h2 class="text-lg font-bold text-slate-900 dark:text-white flex items-center">
                     <i class="fa-solid fa-route mr-2 text-sky-600"></i> Alur Prosedur Pelayanan
                 </h2>
-                <div class="prose max-w-none text-slate-600 text-sm leading-relaxed whitespace-pre-line">
+                <div class="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 text-sm leading-relaxed whitespace-pre-line">
                     {{ $service->procedure }}
                 </div>
             </div>
