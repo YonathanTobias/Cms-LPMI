@@ -620,7 +620,7 @@ class DatabaseSeeder extends Seeder
             [
                 'slug' => 'profil-lpmi',
                 'title' => 'Profil LPMI',
-                'banner_image' => '/storage/organization/profil-lpmi.jpg',
+                'banner_image' => null,
                 'order_index' => 1,
                 'is_published' => true,
                 'content' => '
@@ -714,7 +714,7 @@ class DatabaseSeeder extends Seeder
             [
                 'slug' => 'struktur-organisasi',
                 'title' => 'Struktur Organisasi LPMI',
-                'banner_image' => '/storage/organization/struktur-organisasi-lpmi.jpg',
+                'banner_image' => null,
                 'order_index' => 4,
                 'is_published' => true,
                 'content' => '
@@ -864,7 +864,7 @@ class DatabaseSeeder extends Seeder
             [
                 'slug' => 'halaman-ami',
                 'title' => 'Kebijakan Audit Mutu Internal (AMI) & Auditor',
-                'banner_image' => '/storage/carousels/beranda-web-4.jpg',
+                'banner_image' => null,
                 'order_index' => 6,
                 'is_published' => true,
                 'content' => '
@@ -1083,7 +1083,7 @@ class DatabaseSeeder extends Seeder
             [
                 'slug' => 'kebijakan-ami',
                 'title' => 'Kebijakan Audit Mutu Internal (AMI) & Auditor',
-                'banner_image' => '/storage/carousels/beranda-web-4.jpg',
+                'banner_image' => null,
                 'order_index' => 6,
                 'is_published' => true,
                 'content' => '
@@ -1302,7 +1302,7 @@ class DatabaseSeeder extends Seeder
             [
                 'slug' => 'akred-regulasi',
                 'title' => 'Akreditasi & Regulasi',
-                'banner_image' => '/storage/akreditasi/sertifikat-akreditasi-ban-pt-2025.jpg',
+                'banner_image' => null,
                 'order_index' => 7,
                 'is_published' => true,
                 'content' => '

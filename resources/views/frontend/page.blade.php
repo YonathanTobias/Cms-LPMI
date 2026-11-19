@@ -29,7 +29,12 @@
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div class="bg-white dark:bg-slate-900 rounded-2xl p-6 sm:p-10 shadow-sm border border-slate-200 dark:border-slate-800">
-            @if($page->banner_image)
+            @php
+                $bannerName = $page->banner_image ? basename($page->banner_image) : null;
+                $isDuplicatedInContent = $bannerName && str_contains($page->content ?? '', $bannerName);
+            @endphp
+
+            @if($page->banner_image && !$isDuplicatedInContent)
             <div class="rounded-xl overflow-hidden mb-8 shadow-sm max-h-96">
                 <img src="{{ $page->banner_image }}" alt="{{ $page->title }}" class="w-full h-full object-cover">
             </div>
