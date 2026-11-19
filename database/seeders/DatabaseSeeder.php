@@ -101,6 +101,8 @@ class DatabaseSeeder extends Seeder
             'theme_secondary_color' => '#0284c7', // Sky-600
             'theme_accent_color' => '#d97706', // Amber-600
             'logo_url' => '/storage/logos/cropped-LPMI.png',
+            'organization_chart_image' => '/storage/organization/struktur-organisasi-lpmi.jpg',
+            'organization_display_mode' => 'both',
             'hero_banner_title' => 'Selamat Datang di Website LPMI STIKES Panti Waluya Malang',
             'hero_banner_subtitle' => 'Lembaga Penjaminan Mutu Internal (LPMI) merupakan unit kerja yang bertugas merancang, melaksanakan, mengendalikan, dan mengembangkan sistem penjaminan mutu di perguruan tinggi secara berkelanjutan dengan siklus PPEPP.',
 
@@ -719,9 +721,25 @@ class DatabaseSeeder extends Seeder
                 'is_published' => true,
                 'content' => '
                     <div class="space-y-8">
-                        <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200 bg-white p-4">
-                            <h4 class="text-lg font-bold text-slate-900 mb-3 text-center">Bagan Struktur Organisasi LPMI</h4>
-                            <img src="/storage/organization/struktur-organisasi-lpmi.jpg" alt="Bagan Struktur Organisasi LPMI" class="w-full object-contain mx-auto rounded-lg">
+                        <div class="rounded-2xl overflow-hidden shadow-md border border-slate-200 dark:border-slate-800 bg-white dark:bg-slate-900 p-4 sm:p-6">
+                            <div class="flex flex-col sm:flex-row justify-between items-center gap-3 mb-4 pb-3 border-b border-slate-100 dark:border-slate-800">
+                                <h4 class="text-lg font-bold text-slate-900 dark:text-white flex items-center">
+                                    <i class="fa-solid fa-diagram-project mr-2 text-sky-600 dark:text-sky-400"></i> Bagan Struktur Organisasi LPMI
+                                </h4>
+                                <a href="/storage/organization/struktur-organisasi-lpmi.jpg" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                    <i class="fa-solid fa-expand text-sky-500"></i>
+                                    <span>Lihat Ukuran Penuh</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                </a>
+                            </div>
+                            <div class="bg-slate-50 dark:bg-slate-950 rounded-xl p-2 sm:p-4 border border-slate-200 dark:border-slate-800">
+                                <a href="/storage/organization/struktur-organisasi-lpmi.jpg" target="_blank" title="Klik untuk memperbesar gambar">
+                                    <img src="/storage/organization/struktur-organisasi-lpmi.jpg" alt="Bagan Struktur Organisasi LPMI" class="w-full max-h-[700px] object-contain mx-auto rounded-lg hover:scale-[1.01] transition duration-300">
+                                </a>
+                            </div>
+                            <p class="text-xs text-slate-400 italic text-center mt-2">
+                                * Klik pada bagan struktur organisasi untuk melihat gambar dalam resolusi penuh.
+                            </p>
                         </div>
 
                         <div>
