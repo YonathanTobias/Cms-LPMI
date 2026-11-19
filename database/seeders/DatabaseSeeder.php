@@ -863,57 +863,456 @@ class DatabaseSeeder extends Seeder
             ],
             [
                 'slug' => 'halaman-ami',
-                'title' => 'Halaman Audit Mutu Internal (AMI)',
+                'title' => 'Kebijakan Audit Mutu Internal (AMI) & Auditor',
                 'banner_image' => '/storage/carousels/beranda-web-4.jpg',
                 'order_index' => 6,
                 'is_published' => true,
                 'content' => '
-                    <div class="space-y-8">
-                        <div class="p-6 bg-white rounded-2xl border border-slate-200 shadow-sm space-y-4">
-                            <h3 class="text-xl font-bold text-slate-900">Kebijakan Audit Mutu Internal (AMI)</h3>
-                            <p class="text-slate-700 leading-relaxed">
-                                Kegiatan Audit Mutu Internal (AMI) merupakan bagian penting dari siklus penjaminan mutu di STIKES Panti Waluya Malang. AMI dirancang untuk memastikan bahwa seluruh program studi dan unit kerja telah menerapkan standar mutu secara konsisten, mengidentifikasi peluang perbaikan, serta mempersiapkan institusi menghadapi akreditasi eksternal.
+                    <div class="space-y-10">
+                        <!-- 1. Kebijakan AMI Card -->
+                        <div class="p-6 sm:p-8 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+                            <div class="flex items-center space-x-3 pb-3 border-b border-slate-100 dark:border-slate-800">
+                                <div class="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg">
+                                    <i class="fa-solid fa-clipboard-check"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Penjaminan Mutu Internal</span>
+                                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Kebijakan AMI</h3>
+                                </div>
+                            </div>
+                            <p class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+                                Kegiatan Audit Mutu Internal (AMI) merupakan bagian penting dari pelaksanaan sistem penjaminan mutu internal di STIKes Panti Waluya Malang yang bertujuan untuk menjamin dan mendorong peningkatan mutu secara berkelanjutan di lingkungan perguruan tinggi. Pelaksanaan AMI dilakukan secara berkelanjutan setiap satu tahun sekali secara terencana dan independen oleh auditor internal yang kompeten.
                             </p>
                         </div>
 
-                        <div>
-                            <h4 class="text-lg font-bold text-slate-900 mb-4">Laporan Hasil Audit Mutu Internal per Program Studi</h4>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" class="p-5 bg-white rounded-xl border border-slate-200 hover:border-sky-500 hover:shadow-md transition text-center space-y-2 block">
-                                    <div class="text-3xl text-sky-600"><i class="fa-solid fa-file-pdf"></i></div>
-                                    <h5 class="font-bold text-slate-900 text-sm">AMI D3 Keperawatan</h5>
-                                    <p class="text-xs text-slate-500">Laporan Hasil Audit Mutu</p>
-                                </a>
+                        <!-- 2. Auditor Info & Table Card -->
+                        <div class="p-6 sm:p-8 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+                            <div class="flex items-center space-x-3 pb-3 border-b border-slate-100 dark:border-slate-800">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg">
+                                    <i class="fa-solid fa-user-check"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Kualifikasi Auditor Resmi</span>
+                                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Auditor Mutu Internal</h3>
+                                </div>
+                            </div>
+                            <p class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+                                Auditor AMI STIKes Panti Waluya malang adalah personel yang telah ditugaskan secara resmi oleh institusi untuk melaksanakan audit mutu internal di STIKes Panti Waluya Malang dengan kualifikasi yang telah diakui oleh LLDIKTI melalui kegiatan pelatihan dan memperoleh sertifikat sebagai Auditor AMI.
+                            </p>
 
-                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" class="p-5 bg-white rounded-xl border border-slate-200 hover:border-sky-500 hover:shadow-md transition text-center space-y-2 block">
-                                    <div class="text-3xl text-emerald-600"><i class="fa-solid fa-file-pdf"></i></div>
-                                    <h5 class="font-bold text-slate-900 text-sm">AMI S1 Keperawatan</h5>
-                                    <p class="text-xs text-slate-500">Laporan Hasil Audit Mutu</p>
-                                </a>
-
-                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" class="p-5 bg-white rounded-xl border border-slate-200 hover:border-sky-500 hover:shadow-md transition text-center space-y-2 block">
-                                    <div class="text-3xl text-indigo-600"><i class="fa-solid fa-file-pdf"></i></div>
-                                    <h5 class="font-bold text-slate-900 text-sm">AMI S1 Farmasi</h5>
-                                    <p class="text-xs text-slate-500">Laporan Hasil Audit Mutu</p>
-                                </a>
-
-                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" class="p-5 bg-white rounded-xl border border-slate-200 hover:border-sky-500 hover:shadow-md transition text-center space-y-2 block">
-                                    <div class="text-3xl text-amber-600"><i class="fa-solid fa-file-pdf"></i></div>
-                                    <h5 class="font-bold text-slate-900 text-sm">AMI D4 MIK</h5>
-                                    <p class="text-xs text-slate-500">Laporan Hasil Audit Mutu</p>
-                                </a>
+                            <!-- Tabel Daftar Auditor -->
+                            <div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-left text-xs sm:text-sm">
+                                        <thead class="bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 border-b border-slate-200 dark:border-slate-700 uppercase tracking-wider text-[11px] font-bold">
+                                            <tr>
+                                                <th scope="col" class="px-4 py-3.5 text-center w-16">No</th>
+                                                <th scope="col" class="px-6 py-3.5">Nama Auditor (Inisial)</th>
+                                                <th scope="col" class="px-6 py-3.5 text-center w-48">Sertifikat</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-slate-100 dark:divide-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-medium">
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">1</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Wisoedhanie Widi Anugrahati, S.K.M., M.Kes. <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(WWA)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/1lPPyF-KPlH-ioYtU0RrmardkwFlRJAwL/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">2</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Ns. Oda Debora, S.Kep. <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(OD)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/1XqX29AQaPM6SGWOr9__rTW8sm1petwQX/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">3</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Ns. Febrina Secsaria Handini, M.Kep. <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(FSH)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/10RsN97EPmAKQ0EWuOMMvf2AtxTT9EFmZ/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">4</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Venny Kurnia Andika S.Si., M.Biotech <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(VKA)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/1ZYx2WPSOxpWA6MipwObclYbXLVAL1j70/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">5</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Ns. Narita Diatanti, S.Kep. <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(ND)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/1Smf3yrTfdWaigyKl-u03Qejp_5WMdZx1/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">6</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Atanasius Omega Dewantara, S.E <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(AOD)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/1RimIVHpBpibbTpzPLuZr-8kY6QB9Khyk/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">7</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Wibowo, S.Kep., Ns., M.Biomed <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(W)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/1voLOv7RenobVdXRHQyk6MweehVQKm2lS/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="p-6 bg-slate-50 rounded-2xl border border-slate-200">
-                            <h4 class="font-bold text-slate-900 mb-2">Tahapan Siklus AMI:</h4>
-                            <ol class="list-decimal list-inside text-sm text-slate-700 space-y-1.5">
-                                <li>Perencanaan dan pembentukan tim auditor internal bersertifikat.</li>
-                                <li>Desk evaluation terhadap instrumen dan Laporan Evaluasi Diri (LED) auditee.</li>
-                                <li>Visitasi audit lapangan (wawancara, uji petik dokumen, dan observasi sarpras).</li>
-                                <li>Penyampaian temuan audit (KTS & OB) dan kesepakatan target perbaikan.</li>
-                                <li>Rapat Tinjauan Manajemen (RTM) untuk penetapan langkah peningkatan mutu.</li>
-                            </ol>
+                        <!-- 3. Alur AMI Card -->
+                        <div class="p-6 sm:p-8 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+                            <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center text-lg">
+                                        <i class="fa-solid fa-diagram-project"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Diagram Prosedur</span>
+                                        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Alur AMI</h3>
+                                    </div>
+                                </div>
+                                <a href="/storage/ami/alur-ami.jpeg" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+                                    <i class="fa-solid fa-expand text-slate-500"></i>
+                                    <span>Lihat Ukuran Penuh</span>
+                                </a>
+                            </div>
+                            <div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950">
+                                <a href="/storage/ami/alur-ami.jpeg" target="_blank" title="Klik untuk membuka diagram resolusi tinggi">
+                                    <img src="/storage/ami/alur-ami.jpeg" alt="Bagan Alur Audit Mutu Internal (AMI) STIKES Panti Waluya" class="w-full h-auto object-contain hover:scale-[1.01] transition duration-300" loading="lazy">
+                                </a>
+                            </div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 italic text-center">
+                                * Klik pada gambar alur untuk melihat diagram resolusi penuh dalam tab baru.
+                            </p>
+                        </div>
+
+                        <!-- 4. Laporan Hasil Audit Mutu per Program Studi -->
+                        <div class="p-6 sm:p-8 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+                            <div class="flex items-center space-x-3 pb-3 border-b border-slate-100 dark:border-slate-800">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-lg">
+                                    <i class="fa-solid fa-folder-open"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Pusat Arsip Laporan</span>
+                                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Laporan Hasil Audit Mutu per Program Studi</h3>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" rel="noopener noreferrer" class="p-5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-sky-500 dark:hover:border-sky-500 hover:shadow-md transition text-center space-y-3 block group">
+                                    <div class="text-3xl text-sky-600 dark:text-sky-400 group-hover:scale-110 transition transform"><i class="fa-solid fa-file-pdf"></i></div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-900 dark:text-white text-sm">AMI D3 Keperawatan</h5>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Laporan Hasil Audit Mutu</p>
+                                    </div>
+                                    <span class="inline-flex items-center text-[11px] font-bold text-sky-600 dark:text-sky-400 group-hover:underline">Buka Google Drive <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i></span>
+                                </a>
+
+                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" rel="noopener noreferrer" class="p-5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-md transition text-center space-y-3 block group">
+                                    <div class="text-3xl text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition transform"><i class="fa-solid fa-file-pdf"></i></div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-900 dark:text-white text-sm">AMI S1 Keperawatan</h5>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Laporan Hasil Audit Mutu</p>
+                                    </div>
+                                    <span class="inline-flex items-center text-[11px] font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline">Buka Google Drive <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i></span>
+                                </a>
+
+                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" rel="noopener noreferrer" class="p-5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-md transition text-center space-y-3 block group">
+                                    <div class="text-3xl text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition transform"><i class="fa-solid fa-file-pdf"></i></div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-900 dark:text-white text-sm">AMI S1 Farmasi</h5>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Laporan Hasil Audit Mutu</p>
+                                    </div>
+                                    <span class="inline-flex items-center text-[11px] font-bold text-indigo-600 dark:text-indigo-400 group-hover:underline">Buka Google Drive <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i></span>
+                                </a>
+
+                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" rel="noopener noreferrer" class="p-5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-amber-500 dark:hover:border-amber-500 hover:shadow-md transition text-center space-y-3 block group">
+                                    <div class="text-3xl text-amber-600 dark:text-amber-400 group-hover:scale-110 transition transform"><i class="fa-solid fa-file-pdf"></i></div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-900 dark:text-white text-sm">AMI D4 MIK</h5>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Laporan Hasil Audit Mutu</p>
+                                    </div>
+                                    <span class="inline-flex items-center text-[11px] font-bold text-amber-600 dark:text-amber-400 group-hover:underline">Buka Google Drive <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                ',
+            ],
+            [
+                'slug' => 'kebijakan-ami',
+                'title' => 'Kebijakan Audit Mutu Internal (AMI) & Auditor',
+                'banner_image' => '/storage/carousels/beranda-web-4.jpg',
+                'order_index' => 6,
+                'is_published' => true,
+                'content' => '
+                    <div class="space-y-10">
+                        <!-- 1. Kebijakan AMI Card -->
+                        <div class="p-6 sm:p-8 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+                            <div class="flex items-center space-x-3 pb-3 border-b border-slate-100 dark:border-slate-800">
+                                <div class="w-10 h-10 rounded-xl bg-sky-50 dark:bg-sky-950/60 text-sky-600 dark:text-sky-400 flex items-center justify-center text-lg">
+                                    <i class="fa-solid fa-clipboard-check"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-sky-600 dark:text-sky-400">Penjaminan Mutu Internal</span>
+                                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Kebijakan AMI</h3>
+                                </div>
+                            </div>
+                            <p class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+                                Kegiatan Audit Mutu Internal (AMI) merupakan bagian penting dari pelaksanaan sistem penjaminan mutu internal di STIKes Panti Waluya Malang yang bertujuan untuk menjamin dan mendorong peningkatan mutu secara berkelanjutan di lingkungan perguruan tinggi. Pelaksanaan AMI dilakukan secara berkelanjutan setiap satu tahun sekali secara terencana dan independen oleh auditor internal yang kompeten.
+                            </p>
+                        </div>
+
+                        <!-- 2. Auditor Info & Table Card -->
+                        <div class="p-6 sm:p-8 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+                            <div class="flex items-center space-x-3 pb-3 border-b border-slate-100 dark:border-slate-800">
+                                <div class="w-10 h-10 rounded-xl bg-emerald-50 dark:bg-emerald-950/60 text-emerald-600 dark:text-emerald-400 flex items-center justify-center text-lg">
+                                    <i class="fa-solid fa-user-check"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-emerald-600 dark:text-emerald-400">Kualifikasi Auditor Resmi</span>
+                                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Auditor Mutu Internal</h3>
+                                </div>
+                            </div>
+                            <p class="text-sm sm:text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+                                Auditor AMI STIKes Panti Waluya malang adalah personel yang telah ditugaskan secara resmi oleh institusi untuk melaksanakan audit mutu internal di STIKes Panti Waluya Malang dengan kualifikasi yang telah diakui oleh LLDIKTI melalui kegiatan pelatihan dan memperoleh sertifikat sebagai Auditor AMI.
+                            </p>
+
+                            <!-- Tabel Daftar Auditor -->
+                            <div class="overflow-hidden rounded-xl border border-slate-200 dark:border-slate-700 shadow-sm">
+                                <div class="overflow-x-auto">
+                                    <table class="w-full text-left text-xs sm:text-sm">
+                                        <thead class="bg-slate-50 dark:bg-slate-800 text-slate-900 dark:text-slate-100 border-b border-slate-200 dark:border-slate-700 uppercase tracking-wider text-[11px] font-bold">
+                                            <tr>
+                                                <th scope="col" class="px-4 py-3.5 text-center w-16">No</th>
+                                                <th scope="col" class="px-6 py-3.5">Nama Auditor (Inisial)</th>
+                                                <th scope="col" class="px-6 py-3.5 text-center w-48">Sertifikat</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="divide-y divide-slate-100 dark:divide-slate-800 bg-white dark:bg-slate-900 text-slate-700 dark:text-slate-300 font-medium">
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">1</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Wisoedhanie Widi Anugrahati, S.K.M., M.Kes. <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(WWA)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/1lPPyF-KPlH-ioYtU0RrmardkwFlRJAwL/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">2</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Ns. Oda Debora, S.Kep. <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(OD)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/1XqX29AQaPM6SGWOr9__rTW8sm1petwQX/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">3</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Ns. Febrina Secsaria Handini, M.Kep. <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(FSH)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/10RsN97EPmAKQ0EWuOMMvf2AtxTT9EFmZ/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">4</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Venny Kurnia Andika S.Si., M.Biotech <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(VKA)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/1ZYx2WPSOxpWA6MipwObclYbXLVAL1j70/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">5</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Ns. Narita Diatanti, S.Kep. <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(ND)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/1Smf3yrTfdWaigyKl-u03Qejp_5WMdZx1/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">6</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Atanasius Omega Dewantara, S.E <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(AOD)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/1RimIVHpBpibbTpzPLuZr-8kY6QB9Khyk/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-50/70 dark:hover:bg-slate-800/50 transition">
+                                                <td class="px-4 py-3.5 text-center font-bold text-slate-500 dark:text-slate-400">7</td>
+                                                <td class="px-6 py-3.5 text-slate-900 dark:text-white font-semibold">
+                                                    Wibowo, S.Kep., Ns., M.Biomed <span class="text-xs text-sky-600 dark:text-sky-400 font-bold ml-1">(W)</span>
+                                                </td>
+                                                <td class="px-6 py-3.5 text-center">
+                                                    <a href="https://drive.google.com/file/d/1voLOv7RenobVdXRHQyk6MweehVQKm2lS/view?usp=drive_link" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg text-xs font-bold bg-sky-50 dark:bg-sky-950/60 text-sky-700 dark:text-sky-300 border border-sky-200 dark:border-sky-800 hover:bg-sky-100 dark:hover:bg-sky-900 transition shadow-sm">
+                                                        <i class="fa-solid fa-certificate text-sky-500"></i>
+                                                        <span>Sertifikat Auditor</span>
+                                                        <i class="fa-solid fa-arrow-up-right-from-square text-[10px] ml-0.5 opacity-70"></i>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- 3. Alur AMI Card -->
+                        <div class="p-6 sm:p-8 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-4">
+                            <div class="flex items-center justify-between pb-3 border-b border-slate-100 dark:border-slate-800">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 rounded-xl bg-amber-50 dark:bg-amber-950/60 text-amber-600 dark:text-amber-400 flex items-center justify-center text-lg">
+                                        <i class="fa-solid fa-diagram-project"></i>
+                                    </div>
+                                    <div>
+                                        <span class="text-xs font-bold uppercase tracking-wider text-amber-600 dark:text-amber-400">Diagram Prosedur</span>
+                                        <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Alur AMI</h3>
+                                    </div>
+                                </div>
+                                <a href="/storage/ami/alur-ami.jpeg" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-lg text-xs font-bold bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+                                    <i class="fa-solid fa-expand text-slate-500"></i>
+                                    <span>Lihat Ukuran Penuh</span>
+                                </a>
+                            </div>
+                            <div class="rounded-xl overflow-hidden border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-950">
+                                <a href="/storage/ami/alur-ami.jpeg" target="_blank" title="Klik untuk membuka diagram resolusi tinggi">
+                                    <img src="/storage/ami/alur-ami.jpeg" alt="Bagan Alur Audit Mutu Internal (AMI) STIKES Panti Waluya" class="w-full h-auto object-contain hover:scale-[1.01] transition duration-300" loading="lazy">
+                                </a>
+                            </div>
+                            <p class="text-xs text-slate-500 dark:text-slate-400 italic text-center">
+                                * Klik pada gambar alur untuk melihat diagram resolusi penuh dalam tab baru.
+                            </p>
+                        </div>
+
+                        <!-- 4. Laporan Hasil Audit Mutu per Program Studi -->
+                        <div class="p-6 sm:p-8 bg-white dark:bg-slate-900 rounded-2xl border border-slate-200 dark:border-slate-800 shadow-sm space-y-6">
+                            <div class="flex items-center space-x-3 pb-3 border-b border-slate-100 dark:border-slate-800">
+                                <div class="w-10 h-10 rounded-xl bg-indigo-50 dark:bg-indigo-950/60 text-indigo-600 dark:text-indigo-400 flex items-center justify-center text-lg">
+                                    <i class="fa-solid fa-folder-open"></i>
+                                </div>
+                                <div>
+                                    <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 dark:text-indigo-400">Pusat Arsip Laporan</span>
+                                    <h3 class="text-xl sm:text-2xl font-extrabold text-slate-900 dark:text-white">Laporan Hasil Audit Mutu per Program Studi</h3>
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" rel="noopener noreferrer" class="p-5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-sky-500 dark:hover:border-sky-500 hover:shadow-md transition text-center space-y-3 block group">
+                                    <div class="text-3xl text-sky-600 dark:text-sky-400 group-hover:scale-110 transition transform"><i class="fa-solid fa-file-pdf"></i></div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-900 dark:text-white text-sm">AMI D3 Keperawatan</h5>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Laporan Hasil Audit Mutu</p>
+                                    </div>
+                                    <span class="inline-flex items-center text-[11px] font-bold text-sky-600 dark:text-sky-400 group-hover:underline">Buka Google Drive <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i></span>
+                                </a>
+
+                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" rel="noopener noreferrer" class="p-5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-md transition text-center space-y-3 block group">
+                                    <div class="text-3xl text-emerald-600 dark:text-emerald-400 group-hover:scale-110 transition transform"><i class="fa-solid fa-file-pdf"></i></div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-900 dark:text-white text-sm">AMI S1 Keperawatan</h5>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Laporan Hasil Audit Mutu</p>
+                                    </div>
+                                    <span class="inline-flex items-center text-[11px] font-bold text-emerald-600 dark:text-emerald-400 group-hover:underline">Buka Google Drive <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i></span>
+                                </a>
+
+                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" rel="noopener noreferrer" class="p-5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-indigo-500 dark:hover:border-indigo-500 hover:shadow-md transition text-center space-y-3 block group">
+                                    <div class="text-3xl text-indigo-600 dark:text-indigo-400 group-hover:scale-110 transition transform"><i class="fa-solid fa-file-pdf"></i></div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-900 dark:text-white text-sm">AMI S1 Farmasi</h5>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Laporan Hasil Audit Mutu</p>
+                                    </div>
+                                    <span class="inline-flex items-center text-[11px] font-bold text-indigo-600 dark:text-indigo-400 group-hover:underline">Buka Google Drive <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i></span>
+                                </a>
+
+                                <a href="https://drive.google.com/drive/folders/12IkJCQb32-Vc8wV3BxxooY-jjQs3TVGo?usp=drive_link" target="_blank" rel="noopener noreferrer" class="p-5 bg-slate-50 dark:bg-slate-800/60 rounded-xl border border-slate-200 dark:border-slate-700 hover:border-amber-500 dark:hover:border-amber-500 hover:shadow-md transition text-center space-y-3 block group">
+                                    <div class="text-3xl text-amber-600 dark:text-amber-400 group-hover:scale-110 transition transform"><i class="fa-solid fa-file-pdf"></i></div>
+                                    <div>
+                                        <h5 class="font-bold text-slate-900 dark:text-white text-sm">AMI D4 MIK</h5>
+                                        <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">Laporan Hasil Audit Mutu</p>
+                                    </div>
+                                    <span class="inline-flex items-center text-[11px] font-bold text-amber-600 dark:text-amber-400 group-hover:underline">Buka Google Drive <i class="fa-solid fa-arrow-right ml-1 text-[9px]"></i></span>
+                                </a>
+                            </div>
                         </div>
                     </div>
                 ',
